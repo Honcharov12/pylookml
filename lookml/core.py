@@ -199,7 +199,7 @@ class lookml(object):
         string = ''
         for item in data:
             string += str(item)
-        string = string + ' ' if len(data) > 0 else string
+        #string = string + ' ' if len(data) > 0 else string
         # string = string + ws.nl if len(data) > 0 else string
         return string
     def _type(self) -> str: return self.__class__.__name__.lower()
@@ -359,7 +359,7 @@ class Field(lookml):
             return (
                 f'{ws.nl}{ws.s}{self._type()}: {self.name} {{'
                 f'{ self._s(type=prop) }'
-                f'{ws.nl}{ws.s}}}'
+                f'{ws.nl}{ws.s}}}{ws.nl}'
             )
 
     def __getattr__(self,key):
@@ -1487,7 +1487,7 @@ class prop_list_quoted(prop, common_list_functions):
                     f'''{ '"' + ws.nl + (ws.s*(i+1)) + ']' }'''
                     )
         elif len(self.value) > 0:
-            return f'''{__}{self.key}: { '["' + '","'.join(self.value) + '"]' }'''
+            return f'''{__}{self.key}: { '["' + '", "'.join(self.value) + '"]' }'''
         else:
             return f'{__}{self.key}: { "[]" }'
 
