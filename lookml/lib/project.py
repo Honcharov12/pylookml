@@ -821,7 +821,7 @@ class ProjectSSH(Project):
         """
         git commit and git push changes to remote in SSH mode
         """
-        self._git.commit()
+        self._git.commit(self._commit_message)
         self._git.pushRemote()
 
     def constructDeployUrl(self):
