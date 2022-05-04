@@ -3150,6 +3150,7 @@ config = \
                         "docs_url": "https://looker.com/docs/r/lookml/types/explore_source/timezone?version=7.14&lookml=new",
                         "has_allowed_values": True,
                         "allowed_values": [
+                                "query_timezone",
                                 "Africa/Abidjan",
                                 "Africa/Accra",
                                 "Africa/Addis_Ababa",
@@ -3723,6 +3724,7 @@ config = \
                         "docs_url": "https://looker.com/docs/r/lookml/types/query/timezone?version=7.14&lookml=new",
                         "has_allowed_values": True,
                         "allowed_values": [
+                                "query_timezone",
                                 "Africa/Abidjan",
                                 "Africa/Accra",
                                 "Africa/Addis_Ababa",
