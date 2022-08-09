@@ -60,6 +60,28 @@ config = \
                         "allowed_values": ""
                 }
         },
+        "increment_key": {
+                "derived_table": {
+                        "type": "string",
+                        "subtype": "string",
+                        "indent": 0,
+                        "default_value": "",
+                        "docs_url": "https://looker.com/docs/r/lookml/types/model/connection?version=7.14&lookml=new",
+                        "has_allowed_values": False,
+                        "allowed_values": ""
+                }
+        },
+        "increment_offset": {
+                "derived_table": {
+                        "type": "string_unquoted",
+                        "subtype": "number",
+                        "indent": 0,
+                        "default_value": "",
+                        "docs_url": "https://looker.com/docs/r/lookml/types/model/connection?version=7.14&lookml=new",
+                        "has_allowed_values": False,
+                        "allowed_values": ""
+                }
+        },
         "datagroup": {
                 "model": {
                         "type": "named_construct",
@@ -1871,7 +1893,7 @@ config = \
                 "derived_table": {
                         "type": "sql",
                         "subtype": "sql-block ",
-                        "indent": 3,
+                        "indent": 2,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/derived_table/sql?version=7.14&lookml=new",
                         "has_allowed_values": False,
@@ -2924,7 +2946,7 @@ config = \
                 "derived_table": {
                         "type": "named_construct_single",
                         "subtype": "explore-ref",
-                        "indent": 3,
+                        "indent": 2,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/derived_table/explore_source?version=7.14&lookml=new",
                         "has_allowed_values": False,
@@ -3081,7 +3103,7 @@ config = \
                 "explore_source": {
                         "type": "named_construct",
                         "subtype": "identifier",
-                        "indent": 4,
+                        "indent": 3,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/explore_source/column?version=7.14&lookml=new",
                         "has_allowed_values": False,
@@ -3114,7 +3136,7 @@ config = \
                 "explore_source": {
                         "type": "anonymous_construct_plural",
                         "subtype": "anonymous_construct_plural",
-                        "indent": 4,
+                        "indent": 3,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/explore_source/bind_filters?version=7.14&lookml=new",
                         "has_allowed_values": False,
@@ -4857,7 +4879,7 @@ config = \
                 "bind_filters": {
                         "type": "string_unquoted",
                         "subtype": "field-ref",
-                        "indent": 5,
+                        "indent": 4,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/bind_filters/from_field?version=7.14&lookml=new",
                         "has_allowed_values": False,
@@ -4868,7 +4890,7 @@ config = \
                 "bind_filters": {
                         "type": "string_unquoted",
                         "subtype": "field-ref",
-                        "indent": 5,
+                        "indent": 4,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/bind_filters/to_field?version=7.14&lookml=new",
                         "has_allowed_values": False,
@@ -5057,6 +5079,17 @@ config = \
                         "type": "named_construct",
                         "subtype": "identifier",
                         "indent": 1,
+                        "default_value": "",
+                        "docs_url": "https://looker.com/docs/r/lookml/types/test/assert?version=7.14&lookml=new",
+                        "has_allowed_values": False,
+                        "allowed_values": ""
+                }
+        },
+        "expression": {
+                "assert": {
+                        "type": "sql",
+                        "subtype": "sql-block ",
+                        "indent": 2,
                         "default_value": "",
                         "docs_url": "https://looker.com/docs/r/lookml/types/test/assert?version=7.14&lookml=new",
                         "has_allowed_values": False,

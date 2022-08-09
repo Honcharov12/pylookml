@@ -328,7 +328,9 @@ _allowed_children = \
                 "sql_trigger_value",
                 "table_compression",
                 "table_format",
-                "publish_as_db_view"
+                "publish_as_db_view",
+                "increment_key",
+                "increment_offset"
         ],
         "materialization": [
                 "persist_for",
@@ -455,5 +457,8 @@ _allowed_children = \
         "localization_settings": [
                 "default_locale",
                 "localization_level"
+        ],
+        "assert": [
+                "expression"
         ]
 }
