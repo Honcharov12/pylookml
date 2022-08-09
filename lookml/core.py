@@ -70,7 +70,7 @@ class prop(object):
     def __str__(self):
         indent = ws.nl + (self.conf['indent'] * ws.s)
         if self.parent._dense():
-            return f' {self.key}: {self.value}'
+            return f'{self.key}: {self.value}'
         else:
             return f'{indent}{self.key}: {self.value}'
 
@@ -1350,13 +1350,16 @@ class prop_anonymous_construct(prop):
             rendered_children += (child.conf['indent']*ws.s) + str(child)
         rendered_children += ws.nl + (self.conf['indent'] * ws.s)
         return rendered_children
+    def refresh_children(self):
+        for name,child in self.value.items():
+            self.children.update({name: prop_router(name,child,self)})
     def _dense(self): return len(self.children) == 0
 
     def __str__(self):
         dense = True if self.parent._dense() and self._dense() else False
         i = self.conf['indent']
         __ = ws.nl + (ws.s * i) if not dense else ws.s
-        return f'''{__}{self.key}: {{ { self.print_children() } }}'''
+        return f'''{__}{self.key}: {{ { self.print_children() }}}'''
 
 class prop_anonymous_construct_plural(prop):
     class prop_anonymous_construct_child(prop_anonymous_construct):
