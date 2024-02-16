@@ -1,4 +1,3 @@
-import looker_sdk
 import argparse
 import os
 import re
@@ -6,6 +5,8 @@ import requests
 import json
 import os.path
 from os import path
+
+import looker_sdk
 
 #parse inputs
 arguments = argparse.ArgumentParser()
